@@ -1,0 +1,61 @@
+/*-----------------------------------------------
+|   Backgrounds
+-----------------------------------------------*/
+.bg-holder {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  &.bg-right {
+    left: auto;
+    right: 0;
+  }
+
+  &.overlay:before {
+    position: absolute;
+    content: "";
+    background: rgba(#000, 0.25);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &.overlay-0:before {
+    background: rgba(#000, 0.7);
+  }
+  &.overlay-1:before {
+    background: rgba(#000, 0.55);
+  }
+  &.overlay-2:before {
+    background: rgba(#000, 0.4);
+  }
+
+  .bg-video {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .bg-youtube {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,59 @@
+mixin PriceItem(config, ...items)
+  .col-md-4.pt-4.px-md-2.px-lg-3
+    .card.h-100&attributes(attributes)
+      .card-body.d-flex.flex-column.justify-content-around.mx-auto
+        .text-center.pt-5
+          img(src=`${CWD}assets/img/icons/${config.image}` alt='' ).img-fluid 
+          h5.my-4=config.title
+        ul.list-unstyled
+          each item in items      
+            li.mb-3
+              span.me-2
+                svg.bi.bi-check(xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#2FAB73' viewBox='0 0 16 16')
+                  path(d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z')
+              =item 
+        .text-center.my-5
+          h2.mb-3= config.footerTitle 
+            if config.month
+              span.text-900= config.month
+          if config.hasBtnOutline
+            button.btn.btn-outline-danger.rounded-pill(type='submit') Sign Up  
+          else  
+            button.btn.btn-danger.hover-top.btn-glow.rounded-pill.border-0(type='submit') Sign Up
+                  
+mixin Pricing
+  +Section('container-lg').bg-100.py-7
+    .row.justify-content-center
+      .col-md-8.col-lg-5.text-center.mb-3
+        h2 Choose Your Plan
+        p Let's choose the package that is best for you and explore it happily and cheerfully.
+    .row.h-100.justify-content-center
+      
+      - const p1 = {title:'Free Plan', image: 'pricing.png', footerTitle:'Free', hasBtnOutline: true}
+      - const p2 = {title:'Standard Plan', image: 'pricing.png', footerTitle: '$9', month:'/mo', hasBtnOutline: true }  
+      - const p3 = {title:'Premium Plan', image: 'pricing.png', footerTitle:'$12', month:'/mo', hasBtnOutline: false}
+
+      +PriceItem(p1, 'Unlimited Bandwidth ', 'Encrypted Connection', 'No Traffic Logs','Works on All Devices')
+      +PriceItem(p2, 'Unlimited Bandwidth ', 'Encrypted Connection', 'Yes Traffic Logs','Works on All Devices','Connect Anyware')
+      +PriceItem(p3, 'Unlimited Bandwidth ', 'Encrypted Connection', 'Yes Traffic Logs','Works on All Devices','Connect Anyware','Get New Features')
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

@@ -1,0 +1,13 @@
+mixin Brand(image)
+	.col-6.col-sm-4.col-md-2&attributes(attributes)
+		img(src=`${CWD}assets/img/gallery/${image}` alt='' height="50").img-fluid
+
+mixin Brands
+	+Section.py-5.bg-100
+		.row.justify-content-center
+			+Brand('netflix.png').mb-2.mb-md-0
+			+Brand('reddit.png').mb-2.mb-md-0
+			+Brand('amazon.png').mb-2.mb-md-0
+			+Brand('discord.png').mb-2.mb-sm-0
+			+Brand('spotify.png').mb-2.mb-sm-0
+			

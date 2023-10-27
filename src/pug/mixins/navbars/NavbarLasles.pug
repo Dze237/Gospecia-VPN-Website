@@ -1,0 +1,27 @@
+mixin NavbarLasles
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3(data-navbar-on-scroll)
+    .container
+      a.navbar-brand(href='#')
+        img(src=`${CWD}assets/img/icons/logo.png` alt='' width='30' )
+        span.text-1000.fs-1.ms-2.fw-medium Gospecia
+          span.fw-bold VPN
+      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mx-auto.border-bottom.border-lg-bottom-0.pt-2.pt-lg-0
+          li.nav-item
+            a.nav-link.active(aria-current='page', href='#' class= currentPage === 'index' ? 'active' : false ) About
+          li.nav-item
+            a.nav-link(href='#') Features
+          li.nav-item
+            a.nav-link(href='#') Pricing 
+          li.nav-item
+            a.nav-link(href='#') Testimonials
+          li.nav-item
+            a.nav-link(href='#') Help  
+        form.d-flex.py-3.py-lg-0
+          button.btn.btn-link.text-1000.fw-medium.order-1.order-lg-0(type='button') Sign in
+          button.btn.btn-outline-danger.rounded-pill.order-0(type='submit') Sign Up
+
+
