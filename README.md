@@ -9,6 +9,7 @@ The files from this repository are **first copied to a hosting platform** before
 
 ## **About the Gospecia VPN Website**
 The **Gospecia VPN Website** is designed to:
+
 ✔ **Provide information about Gospecia VPN’s features and benefits.**  
 ✔ **Offer customer support and FAQs for users.**  
 ✔ **Ensure compliance with Play Store and App Store policies.**  
